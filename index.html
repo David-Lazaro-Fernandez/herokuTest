@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hackHeroku</title>
+        <!--Kit de iconos de Font Is Awesome-->
+        <script src="https://kit.fontawesome.com/91cd17c05d.js" crossorigin="anonymous"> </script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+
+        <nav id="navbar">
+  <header><span class="fab fa-python"></span> Python Doc</header>
+  <ul>
+    <li><a class="nav-link" href="#Introducción">Introducción</a></li>
+    <li>
+      <a class="nav-link" href="#Variables_en_Python"
+        >Variables en Python</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#Asignar_un_valor_a_una_variable_en_Python">Asignar un valor a una variable en Python</a>
+    </li>
+    <li><a class="nav-link" href="#Tipos_de_datos_basicos_y_¿Qué_son?">Tipos de datos basicos y ¿Qué son?
+</a></li>
+     <li> <a class="nav-link" href="#Operadores_en_Python">Operadores en Python
+</a>
+    </li>
+    <li><a class="nav-link" href="#Operador_de_concatenación_de_cadenas">Operador de concatenación de cadenas</a></li>
+    <li><a class="nav-link" href="#Operadores_de_comparación">Operadores de comparación</a></li>
+    <li><a class="nav-link" href="#Consideraciones_sobre_los_operadores_de_comparación">Consideraciones sobre los operadores de comparación</a></li>
+    <li><a class="nav-link" href="#Operadores_aritméticos_en_Python">Operadores aritméticos en Python
+</a></li>
+    <li>
+      <a class="nav-link" href="#Sentencia_básica_if">Sentencia básica if</a>
+    </li>
+    <li><a class="nav-link" href="#Sentencia_básica_if/else">Sentencia básica if/else</a></li>
+    
+    <li><a class="nav-link" href="#Referencias">Referencias</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introducción">
+    <header>Introducción</header>
+    <article>
+      <p>
+        Python es un lenguaje de programación potente y fácil de aprender.Tiene estructuras de datos de alto nivel eficientes y un simple pero efectivo sistema de programación orientado a objetos. La elegante sintaxis de Python y su tipado dinámico, junto a su naturaleza interpretada lo convierten en un lenguaje ideal para scripting y desarrollo rápido de aplicaciones en muchas áreas, para la mayoría de plataformas.<br/><br/>
+
+                            El intérprete de Python y la extensiva librería estándar se encuentran disponibles libremente en código fuente y forma binaria para la mayoría de plataformas desde la Web de Python, https://www.python.org/, y se pueden distribuir libremente. El mismo sitio contiene distribuciones y direcciones a muchos módulos de Python de terceras partes, programas, herramientas y adicionalmente documentación.<br/><br/>
+
+                            El intérprete de Python es fácilmente extensible con funciones y tipos de datos implementados en C o C++ (o otros lenguajes que permitan ser llamados desde C). Python también es apropiado como un lenguaje para extender aplicaciones modificables.<br/><br/>
+
+                            Este tutorial introduce al lector informalmente a los conceptos básicos y las funcionalidades del lenguaje de programación Python y a su sistema. Ayuda a tener un interprete de Python accesible para una experiencia práctica, todos los ejemplos son auto-contenidos, permitiendo utilizar el tutorial sin conexión.<br/><br/>
+
+                            Para una descripción de los objetos estándar y de los módulos, ver La Biblioteca Estándar de Python. Referencia del Lenguaje Python dónde se ofrece una definición más formal del lenguaje. Para escribir extensiones en C o C++, leer Ampliación e incrustación del intérprete de Python y Manual de referencia de la API en C de Python. Existen diversos libros que cubren Python en detalle.<br/><br/>
+
+                            Este tutorial no pretende ser comprensible y cubrir todas las funcionalidades, o incluso ni las más utilizadas. Pretende introducir muchas de las funcionalidades más notables y dar una idea del estilo y el tipo de lenguaje. Después de leerlo podrás leer y escribir módulos y programas en Python y estarás listo para aprender sobre varias librerías y módulos descritos en La Biblioteca Estándar de Python.<br/>
+      </p>
+
+  
+    </article>
+  </section>
+  <section class="main-section" id="Variables_en_Python">
+    <header>Variables en Python</header>
+    <article>
+      <p>
+                            Las variables son uno de los dos componentes básicos de cualquier programa.<br/><br/>
+
+                            En su esencia, un programa está compuesto por datos e instrucciones que manipulan esos datos. Normalmente, los datos se almacenan en memoria (memoria RAM) para que podamos acceder a ellos.
+                            <br/><br/>
+                            Entonces, ¿qué es una variable? Una variable es una forma de identificar, de forma sencilla, un dato que se encuentra almacenado en la memoria del ordenador. Imagina que una variable es un contenedor en el que se almacena un dato, el cuál, puede cambiar durante el flujo del programa. Una variable nos permite acceder fácilmente a dicho dato para ser manipulado y transformado.
+                            <br/><br/>
+                            Por ejemplo, supongamos que queremos mostrar el resultado de sumar 1 + 2. Para mostrar el resultado, debemos indicarle al programa dónde se encuentra dicho dato en memoria y, para ello, hacemos uso de una variable:
+                            <br/>
+                        </p>
+      <article class="codigo">
+        <code>
+          <p>
+        # Guardamos en la variable suma el resultado de 1 + 2<br/>
+           suma = 1 + 2<br/>
+           # Accedemos al resultado de 1 + 2 a través de la variable suma<br/>
+           print(suma)<br/>
+          </p>
+        </code> 
+      </article>
+    </article>
+  </section>
+  <section class="main-section" id="Asignar_un_valor_a_una_variable_en_Python">
+    <header>Asignar un valor a una variable en Python</header>
+    <article>
+      <p>
+          Tal y como hemos visto en el ejemplo anterior, para asignar un valor (un dato) a una variable se utiliza el operador de asignación <span class="remark">=</span>
+           <br/><br/>
+            En la operación de asignación se ven involucradas tres partes
+                        </p>  
+                        <ul>
+                                <li>El operador de asignación <span class="remark">=</span></li>
+                                <li>Un identificador o nombre de variable, a la izquierda del operador</li>
+                                <li>Un literal, una expresión, una llamada a una función o una combinación de todos ellos a la derecha del operador de asignación</li>
+                        </ul>
+                       <article class="codigo">
+                         <code>
+                                   <p>  # Asigna a la variable "a" el valor 1 <br/>
+                                        a = 1<br/>
+                                        # Asigna a la variable "a" el resultado de la expresión 3 * 4<br/>
+                                        a = 3 * 4<br/>
+                                        # Asigna a la variable "a" la cadena de caracteres 'Pythonista'<br/>
+                                        a = 'Pythonista'<br/>
+                                    </p>
+                         </code>
+                      </article>
+    </article>
+    
+  </section>
+  <section class="main-section" id="Tipos_de_datos_basicos_y_¿Qué_son?">
+    <header>Tipos de datos basicos y ¿Qué son?</header>
+    <article>
+      <p>
+                        ¿Qué tipos de datos trae consigo Python?
+                        <br/><br/>
+                        En Python podemos encontrar distintos tipos de datos con diferentes características y clasificaciones. En este tutorial repasaremos los tipos de datos básicos, aunque te introduciré otros tipos de datos que veremos en tutoriales posteriores.
+                        <br/><br/>
+                        Los tipos de datos básicos de Python son los booleanos, los numéricos (enteros, punto flotante y complejos) y las cadenas de caracteres.
+                        <br/><br/>
+                        Python también define otros tipos de datos, entre los que se encuentran:
+                    </p>
+                    <ul>
+                        <li> Secuencias: Los tipos list, tuple y range</li>
+                        <li>Mapas: El tipo dict</li>
+                        <li>Conjuntos: El tipo set</li>
+                        <li>Iteradores</li>
+                        <li>Clases</li>
+                        <li>Instancias</li>
+                        <li>Excepciones</li>
+                        
+                    </ul>
+                    <p>A su vez, los tipos anteriores se pueden agrupar de diferente manera. Por ejemplo: el tipo cadena de caracteres es una secuencia inmutable; las listas, tuplas o diccionarios, entre otros, son contenedores y colecciones, etc. Pero esto no lo veremos aquí.
+                    <br/><br/>
+
+                    En fin, no te agobies con tanto tipo ni tanto concepto nuevo. Tómatelo con calma que estás aprendiendo.
+                    </p>
+    </article>
+  </section>
+  <section class="main-section" id="Operadores_en_Python">
+    <header>Operadores en Python</header>
+    <p>
+                                En el tutorial de Introducción ya hablamos sobre los operadores en Python. Como te indiqué, los operadores son símbolos reservados por el propio lenguaje que se utilizan para llevar a cabo operaciones sobre uno, dos o más elementos llamados operandos. Los operandos pueden ser variables, literales, el valor devuelto por una expresión o el valor devuelto por una función.
+                                <br/><br/>
+                                El ejemplo más típico que siempre viene a la mente es el operador suma, +, que se utiliza para obtener la suma aritmética de dos valores:
+                                <br/><br/>
+                            </p>
+                            <article class="codigo">
+                              <code>
+                                    <p>
+                                        >>> 9 + 1  # 9 y 1 son los operandos<br/>
+                                        10  # 10 es el resultado<br/>
+                                        -----------------------------------------------------------       
+                                    </p>
+                              </code>
+                            </article>
+  </section>
+  <section class="main-section" id="Operador_de_concatenación_de_cadenas">
+    <header>Operador de concatenación de cadenas</header>
+    <p>
+                            Una de las operaciones más básicas cuando se trabaja con cadenas de caracteres es la concatenación. Esto consiste en unir dos cadenas en una sola, siendo el resultado un nuevo string.
+
+                            La forma más simple de concatenar dos cadenas en Python es utilizando el operador de concatenación <span class="remark">+</span>:
+                        </p>
+                        <article class="codigo">
+                          <code>
+                            <p>
+                            >>> hola = 'Hola'<br/>
+                            >>> python = 'Pythonista'<br/>
+                            >>> hola_python = hola + ' ' + python  # concatenamos 3 strings<br/>
+                            >>> print(hola_python)<br/>
+                            Hola Pythonista<br/>
+                            </p>
+                          </code>
+                        </article>
+  </section>
+  <section class="main-section" id="Operadores_de_comparación">
+    <header>Operadores de comparación</header>
+    <p>
+                            Los operadores de comparación se utilizan, como su nombre indica, para comparar dos o más valores. El resultado de estos operadores siempre es<br/> <span class="remark"> True o False</span>.
+                            <br/>
+                        </p>
+                        <article class="codigo">
+                          <code> 
+                          <p>
+                                <span class="remark-code">
+                                &gt;</span> 	Mayor que.<br/> <span class="remark-code">True</span> si el operando de la izquierda es estrictamente mayor que el de la derecha; <span class="remark-code">False</span> en caso contrario.
+                                <br/><br/>
+                                <span class="remark-code">&gt;=</span> Mayor o igual que.<br/> <span class="remark-code">True</span> si el operando de la izquierda es mayor o igual que el de la derecha; <span class="remark-code">False</span> en caso contrario.
+                                <br/><br/>
+                                <span class="remark-code">&lt;</span> Menor que. <br/><span class="remark-code">True</span> si el operando de la izquierda es estrictamente menor que el de la derecha; <span class="remark-code">false</span> en caso contrario.
+                                <br/><br/>
+                                <span class="remark-code">&lt;=</span>	Menor o igual que.<br/> <span class="remark-code">True</span> si el operando de la izquierda es menor o igual que el de la derecha; <span class="remark-code">False</span> en caso contrario.
+                                <br/><br/>
+                                <span class="remark-code">==</span>	Igual. <br/><span class="remark-code">True</span> si el operando de la izquierda es igual que el de la derecha; <span class="remark-code">False</span> en caso contrario.
+                                <br/><br/>
+                                <span class="remark-code">==</span>	Distinto. <br/><span class="remark-code">True</span> si los operandos son distintos; <span class="remark-code">False</span> en caso contrario.
+                                <br/><br/>
+                            </p>
+                           </code> 
+                        </article>
+                        <p>¿Qué tal si vemos algunos ejemplos para que puedas darte una mejor idea del como funcionan esta clase de operadores?</p>
+                        <article class="codigo">
+                          <code>
+                            <p>
+                                &gt;&gt;&gt; x = 9<br/>
+                                &gt;&gt;&gt; y = 1<br/>
+                                &gt;&gt;&gt; x &lt; y<br/>
+                                False<br/>
+                                &gt;&gt;&gt; x &gt; y<br/>
+                                True<br/>
+                                &gt;&gt;&gt; x == y<br/>
+                                False<br/>
+                            </p>
+                           </code>
+                        </article>
+  </section>
+  <section class="main-section" id="Consideraciones_sobre_los_operadores_de_comparación">
+    <header>Consideraciones sobre los operadores de comparación
+</header>
+    
+                        <p>
+                            Los objetos de diferentes tipos, excepto los tipos numéricos, nunca se comparan igual. El operador <span class="remark">==</span> siempre está definido, pero para algunos tipos de objetos (por ejemplo, objetos de clase) es equivalente a is.<br/><br/>
+
+                            Las instancias no idénticas de una clase normalmente se comparan como no iguales a menos que la clase defina el método <span class="remark">__eq__()</span>.<br/><br/>
+
+                            Las instancias de una clase no se pueden ordenar con respecto a otras instancias de la misma clase u otros tipos de objeto, a menos que la clase defina los métodos <span class="remark">__lt__()</span>, <span class="remark">__gt__()</span>.<br/><br/>
+
+                            Los operadores de comparación se pueden concatenar. Ejemplo:<br/>
+                        </p>
+                        <article class="codigo">
+                          <code>
+                            <p>
+                                # Las comparaciones siguientes son idénticas<br/>
+                                &gt;&gt;&gt; x = 9<br/>
+                                &gt;&gt;&gt; 1 &lt; x and x &lt; 20<br/>
+                                True<br/>
+                                &gt;&gt;&gt; 1 &lt; x &lt; 20<br/>
+                                True<br/>
+                            </p>
+                           </code>
+                        </article>
+  </section>
+  <section class="main-section" id="Operadores_aritméticos_en_Python">
+    <header>Operadores aritméticos en Python</header>
+    <p>
+                            En cuanto a los operadores aritméticos, estos permiten realizar las diferentes operaciones aritméticas del álgebra: suma, resta, producto, división, … Estos operadores Python son de los más utilizados. El listado completo es el siguiente:<br/>
+                        </p>
+                        <article class="codigo">
+                          <code>
+                            <p>
+                                <span class="remark-code">+</span>	Suma dos operandos.<br/><br/>
+                                <span class="remark-code">-</span>	Resta al operando de la izquierda el valor del operando de la derecha. Utilizado sobre un único operando, le cambia el signo.<br/><br/>
+                                <span class="remark-code">*</span>	Producto/Multiplicación de dos operandos.<br/><br/>
+                                <span class="remark-code">/</span>	Divide el operando de la izquierda por el de la derecha (el resultado siempre es un float).<br/><br/>
+                                <span class="remark-code">%</span>	Operador módulo. Obtiene el resto de dividir el operando de la izquierda por el de la derecha.<br/><br/>
+                                <span class="remark-code">//</span>	Obtiene el cociente entero de dividir el operando de la izquierda por el de la derecha.<br/><br/>
+                                <span class="remark-code">**</span>	Potencia. El resultado es el operando de la izquierda elevado a la potencia del operando de la derecha.<br/><br/>
+                            </p>
+                          </code>  
+                        </article>
+                        <p>Ahora que conocemos los operadores aritméticos en Python veamos algunos ejemplos para que podamos ver como funcionan estos:</p>
+                        <article class="codigo">
+                          <code>
+                            <p>
+                                &gt;&gt;&gt; x = 7<br/>
+                                &gt;&gt;&gt; y = 2<br/>
+                                &gt;&gt;&gt; x + y  # Suma<br/>
+                                9<br/>
+                                &gt;&gt;&gt; x - y  # Resta<br/>
+                                5<br/>
+                                &gt;&gt;&gt; x * y  # Producto<br/>
+                                14<br/>
+                                &gt;&gt;&gt; x / y  # División<br/>
+                                3.5<br/>
+                                &gt;&gt;&gt; x % y  # Resto<br/>
+                                1<br/>
+                                &gt;&gt;&gt; x // y  # Cociente<br/>
+                                3<br/>
+                                &gt;&gt;&gt; x ** y  # Potencia<br/>
+                                49<br/>
+                            </p>
+                          </code> 
+                        </article>
+  </section>
+  <section class="main-section" id="Sentencia_básica_if">
+    <header>Sentencia básica if</header>
+    <p>
+      En Python, la sentencia if se utiliza para ejecutar un bloque de código si, y solo si, se cumple una determinada condición. Por tanto, if es usado para la toma de decisiones.<br/><br/>
+
+La estructura básica de esta sentencia if es la siguiente:<br/><br/>
+    </p>
+    <article class="codigo">
+      <code>
+      <p>
+        <span class="remark-code">if condición:</span><br/>
+        bloque de código<br/>
+      </p>
+        </code>  
+    </article>
+    <p>
+     Es decir, solo si condición se evalúa a True, se ejecutarán las sentencias que forman parte de bloque de código. En caso de que se evalúe a False no se ejecutará ninguna sentencia perteneciente a bloque de código.
+    <br/><br/>
+    Aquí, condición puede ser un literal, el valor de una variable, el resultado de   una expresión o el valor devuelto por una función.
+    <br/><br/>
+    En las expresiones es muy común usar los operadores booleanos y de comparación.
+      <br/>
+    </p>
+    
+    <p><span class="remark">IMPORTANTE:</span> El cuerpo del bloque está indicado con un sangrado mayor. Dicho bloque termina cuando se encuentre la primera línea con un sangrado menor.<br/><br/> Veamos un part de ejemplos para entender la sentencia de una mejor forma</p>
+    <article class="codigo">
+      <code>
+        <p>
+        x = 17 <br/>
+        if x &lt; 20:<br/>
+        print('x es menor que 20')<br/>
+      </p>
+     </code>
+    </article>
+    <p>
+      En el código anterior la variable <span class="remark">x</span> toma el valor <span class="remark">17</span>. En la línea 2, la condición de la sentencia <span class="remark">if</span> evalúa si <span class="remark">x es menor que 20</span>. Como el valor devuelto por la expresión es True, se ejecuta el bloque del <span class="remark">if</span>, mostrando por pantalla la cadena <span class="remark">x es menor que 20</span>.
+
+Veamos otro ejemplo:
+    </p>
+    <article class="codigo">
+     <code>
+      <p>
+        valores = [1, 3, 4, 8]<br/>
+        if 5 in valores:<br/>
+        print('está en valores')<br/>
+        print('fin')<br/>
+      </p>
+    </code>
+    </article>
+    <p>
+      En este caso tenemos una lista de valores. El <span class="remark">if</span> comprueba si el número <span class="remark">5</span> se encuentra entre estos valores. Como la expresión devuelve como resultado <span class="remark">False</span>, porque <span class="remark">5</span> no está entre los valores, el código anterior simplemente mostrará por pantalla la cadena <span class="remark">fin</span>.
+      <br/><br/>
+Si repetimos el ejemplo anterior, modificando la condición a esta otra <span class="remark">3 in valores</span>, el resultado del programa sería:<br/><br/>
+    </p>
+    <article class="codigo">
+      <code>
+      <p>
+        está en valores<br/>
+        fin<br/>
+      </p>
+      </code>
+    </article>
+  </section>
+  <section class="main-section" id="Sentencia_básica_if/else">
+    <header>Sentencia básica if/else</header>
+    <p>
+      Hay ocasiones en que la sentencia if básica no es suficiente y es necesario ejecutar un conjunto de instrucciones o sentencias cuando la condición se evalúa a <span class="remark">False</span>.
+
+      Para ello se utiliza la estructura <span class="remark">if ... else...</span> Esta es estructura es como sigue:
+    </p>
+    <article class="codigo">
+      <code>
+      <p>
+        <span class="remark-code">if condición:</span><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;bloque de código<br/> &nbsp;&nbsp;&nbsp;&nbsp;(cuando condición se<br/>&nbsp;&nbsp;&nbsp;&nbsp;evalúa a True)<br/>
+        <span class="remark-code">else:</span><br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;bloque de código<br/> &nbsp;&nbsp;&nbsp;&nbsp;(cuando condición se<br/>&nbsp;&nbsp;&nbsp;&nbsp;evalúa a False)<br/>
+      </p>
+      </code>
+    </article>
+    <p>
+      Imagina que estás implementado un programa en el que necesitas realizar la división de dos números. Si divides un número entre 0, el programa lanzará un error y terminará. Para evitar esto, podemos añadir una sentencia <span class="remark">if ... else...</span> como en el ejemplo siguiente:
+    </p>
+    <article class="codigo">
+      <code>
+      <p> 
+        resultado = None<br/>
+        x = 10<br/>
+        y = 2<br/>
+        <span class="remark-code">if y > 0:</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;resultado = x / y<br/>
+        <span class="remark-code">else:</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;resultado = f'No se puede dividir {x} entre {y}'<br/>
+        print(resultado)<br/>
+      </p>
+      </code>  
+    </article>
+  </section>
+  
+  <section class="main-section" id="Referencias">
+    <header>Referencias</header>
+    <article>
+      <ul>
+        <li>
+          Toda la documentación de esta página fue tomada de la documentación oficial de Python y de los increibles articulos de los chicos de ¡J2logo!
+         </li>
+         <li> 
+           <a href="https://docs.python.org/es/3/tutorial/index.html"
+            target="_blank">Link a la documentación oficial de Python en español</a>
+         </li>
+        <li><a href="https://j2logo.com/python/tutorial/" target="_blank">¡Visita a los chicos de J2logo!</a></li>
+       
+      </ul>
+    </article>
+  </section>
+</main>
+
+    </body>
+</html>
