@@ -1,5 +1,5 @@
 //Port del servidor que se enviara a heroku
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 80;
 //Librerias que importatemos
 const express = require("express");
 const mongoose = require("mongoose");
@@ -31,7 +31,7 @@ const padawanSchema = {
 const coder = mongoose.model("coder",padawanSchema);
 
 //Renderizado de la pagina
-app.get("/", (req,res) => {
+app.get("https://hackademytest.herokuapp.com", (req,res) => {
     //Obtencion de la información desde mongoDB
     coder.find({},function(err, panas){
         
@@ -42,7 +42,7 @@ app.get("/", (req,res) => {
 })
 
 //Envio de la información hacia mongoDB que obtenemos del formulario
-app.post("/", function(req,res){
+app.post("https://hackademytest.herokuapp.com", function(req,res){
     let newPadawan = new coder({
         nombre: req.body.nombre,
         apellidoPaterno: req.body.apellidoPaterno,
@@ -53,7 +53,7 @@ app.post("/", function(req,res){
     //Guardamos la informacion en mongo y redireccionamos a la página  
     //en la que estamos de nuevo
     newPadawan.save();
-    res.redirect("/");
+    res.redirect("https://hackademytest.herokuapp.com");
 })
 //Prueba para verificar que nuestro servidor esta funcionando correctamente
 app.listen(PORT, function(){
