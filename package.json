@@ -1,0 +1,15 @@
+{
+    "name":"test_hackademy",
+    "version": "1.0.0",
+    "description": "documentation page de un filtro de hackademy",
+    "main": "server.js",
+    "scripts":{
+
+    },
+    "keywords": ["documentation","python","code"],
+    "author": "David Lazaro Fernandez",
+    "license": "LCS",
+    "dependencies": {
+        "express": "6.14.5"
+    } 
+}
