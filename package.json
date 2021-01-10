@@ -11,5 +11,8 @@
     "license": "LCS",
     "dependencies": {
         "express": "6.14.5"
-    } 
+    },
+    "engines": {
+        "node":"12.18.1"
+    }
 }
