@@ -203,3 +203,13 @@ input ::placeholder{
   margin: 5px;
   font-size: 30px;
 }
+
+.Resultados table{
+  width: 100%;
+  border: none;
+  box-shadow: 0px 0px 10px #a5a4a4;
+}
+
+.Resultados table td{
+    text-align: center;
+}
